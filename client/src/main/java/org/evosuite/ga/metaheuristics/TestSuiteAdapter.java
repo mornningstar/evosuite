@@ -402,6 +402,8 @@ public abstract class TestSuiteAdapter<A extends GeneticAlgorithm<TestChromosome
                 algorithm.setCrossOverFunction(new SinglePointFixedCrossOver<>());
             } else if (crossover instanceof SinglePointCrossOver) {
                 algorithm.setCrossOverFunction(new SinglePointCrossOver<>());
+            } else if (crossover instanceof WeightedCrossOver){
+                algorithm.setCrossOverFunction(new WeightedCrossOver());
             } else {
                 throw new IllegalArgumentException("cannot adapt crossover " + crossover);
             }

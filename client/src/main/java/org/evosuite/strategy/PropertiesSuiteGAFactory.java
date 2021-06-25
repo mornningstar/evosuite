@@ -260,12 +260,14 @@ public class PropertiesSuiteGAFactory
 		case SINGLEPOINT:
 			return new SinglePointCrossOver<>();
 		case COVERAGE:
-			if (Properties.STRATEGY != Properties.Strategy.EVOSUITE) {
-				throw new RuntimeException("Coverage crossover function requires test suite mode");
-			}
+			// if (Properties.STRATEGY != Properties.Strategy.EVOSUITE) {
+			// 	throw new RuntimeException("Coverage crossover function requires test suite mode");
+			// }
 			return new org.evosuite.ga.operators.crossover.CoverageCrossOver();
 		case UNIFORM:
 			return new UniformCrossOver<>();
+		case WEIGHTED:
+			return new WeightedCrossOver();
 		default:
 			throw new RuntimeException("Unknown crossover function: "
 			        + Properties.CROSSOVER_FUNCTION);
