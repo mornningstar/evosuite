@@ -622,7 +622,7 @@ public class Properties {
 
 	@Parameter(key = "chromosome_length", group = "Search Algorithm", description = "Maximum length of chromosomes during search")
 	@IntValue(min = 1, max = 100000)
-	public static int CHROMOSOME_LENGTH = 40;
+	public static int CHROMOSOME_LENGTH = 60;
 
 	@Parameter(key = "number_of_tests_per_target", group = "Search Algorithm", description = "Number of test cases for each target goal to keep in an archive")
 	public static int NUMBER_OF_TESTS_PER_TARGET = 10;
@@ -675,7 +675,7 @@ public class Properties {
 	public static StoppingCondition STOPPING_CONDITION = StoppingCondition.MAXTIME;
 
 	public enum CrossoverFunction {
-		SINGLEPOINTRELATIVE, SINGLEPOINTFIXED, SINGLEPOINT, COVERAGE, UNIFORM, WEIGHTED
+		SINGLEPOINTRELATIVE, SINGLEPOINTFIXED, SINGLEPOINT, COVERAGE, UNIFORM, WEIGHTED, TWOPOINTS
 	}
 
 	@Parameter(key = "crossover_function", group = "Search Algorithm", description = "Crossover function during search")

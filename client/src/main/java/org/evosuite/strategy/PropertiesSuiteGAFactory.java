@@ -268,6 +268,8 @@ public class PropertiesSuiteGAFactory
 			return new UniformCrossOver<>();
 		case WEIGHTED:
 			return new WeightedCrossOver();
+		case TWOPOINTS:
+			return new TwoPointsCrossOver();
 		default:
 			throw new RuntimeException("Unknown crossover function: "
 			        + Properties.CROSSOVER_FUNCTION);
