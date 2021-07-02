@@ -328,6 +328,10 @@ public abstract class Chromosome<T extends Chromosome<T>>
 	public abstract void crossOver(T other, int position1, int position2)
 			throws ConstructionFailedException;
 
+
+	public abstract void crossOver(T other)
+			throws ConstructionFailedException;
+
 	/**
 	 * Apply the local search
 	 * 

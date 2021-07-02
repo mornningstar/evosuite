@@ -123,4 +123,9 @@ public class DummyChromosome extends Chromosome<DummyChromosome> {
     public DummyChromosome self() {
         return this;
     }
+
+    @Override
+	public void crossOver(DummyChromosome other) {
+
+	}
 }

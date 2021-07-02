@@ -270,6 +270,8 @@ public class PropertiesSuiteGAFactory
 			return new WeightedCrossOver();
 		case TWOPOINTS:
 			return new TwoPointsCrossOver();
+		case SINUSOIDAL:
+			return new SinusoidalCrossOver();
 		default:
 			throw new RuntimeException("Unknown crossover function: "
 			        + Properties.CROSSOVER_FUNCTION);

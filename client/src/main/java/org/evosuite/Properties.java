@@ -675,7 +675,7 @@ public class Properties {
 	public static StoppingCondition STOPPING_CONDITION = StoppingCondition.MAXTIME;
 
 	public enum CrossoverFunction {
-		SINGLEPOINTRELATIVE, SINGLEPOINTFIXED, SINGLEPOINT, COVERAGE, UNIFORM, WEIGHTED, TWOPOINTS
+		SINGLEPOINTRELATIVE, SINGLEPOINTFIXED, SINGLEPOINT, COVERAGE, UNIFORM, WEIGHTED, TWOPOINTS, SINUSOIDAL
 	}
 
 	@Parameter(key = "crossover_function", group = "Search Algorithm", description = "Crossover function during search")

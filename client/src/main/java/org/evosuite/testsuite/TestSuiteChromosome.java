@@ -168,6 +168,10 @@ public final class TestSuiteChromosome
 	}
 
 
+	@Override
+	public void crossOver(TestSuiteChromosome other) {
+
+	}
 
 	/**
 	 * {@inheritDoc}

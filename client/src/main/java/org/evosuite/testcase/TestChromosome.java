@@ -182,6 +182,38 @@ public final class TestChromosome extends AbstractTestChromosome<TestChromosome>
 	}
 
 
+	@Override
+	public void crossOver(TestChromosome other)
+			throws ConstructionFailedException {
+
+		logger.debug("Crossover starting");
+		TestChromosome offspring = new TestChromosome();
+		TestFactory testFactory = TestFactory.getInstance();
+
+		for (int i = 0; i < test.size(); i++) {
+			if(i%2==0){
+				if(test.hasStatement(i)){
+					offspring.test.addStatement(test.getStatement(i).clone(offspring.test));
+				}
+			}
+		}
+
+		for (int i = 0; i < other.size(); i++) {
+			if(i%2==1){
+				if(other.test.hasStatement(i)){
+					testFactory.appendStatement(offspring.test,
+					other.test.getStatement(i));
+				}
+			}
+		}
+		if (!Properties.CHECK_MAX_LENGTH
+				|| offspring.test.size() <= Properties.CHROMOSOME_LENGTH) {
+			test = offspring.test;
+			setChanged(true);
+		}
+	}
+
+
 
 	/**
 	 * {@inheritDoc}
