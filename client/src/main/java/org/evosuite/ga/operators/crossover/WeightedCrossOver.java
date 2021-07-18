@@ -19,7 +19,7 @@ public class WeightedCrossOver extends CrossOverFunction {
 
 		
 
-		if(score1 > score2){
+		if(score1 < score2){
 			int cut1 = (int) (Math.round(parent1.size() / 3.0 * 2.0));
 			int cut2 = (int) (Math.round(parent2.size() / 3.0));
 

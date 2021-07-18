@@ -31,8 +31,8 @@ public class TwoPointsCrossOver extends CrossOverFunction {
 
 
 
-        parent1.crossOver(t22, point2, t22.size()-1);
-		parent2.crossOver(t11, point4, t11.size()-1);
+        parent1.crossOver(t22, point2, point4);
+		parent2.crossOver(t11, point4, point2);
 
 
 	}
