@@ -1,5 +1,7 @@
 #!/bin/bash
 
+unzip Test.zip
+
 mvn package -DskipTests=true
 
 cp ./master/target/evosuite-master-1.1.1-SNAPSHOT.jar ./Test/evosuite.jar
